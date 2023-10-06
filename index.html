@@ -12,42 +12,81 @@
 <body>
     <form id="pregunta1">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" id="puntoUno">Escriba la contraseña</label>
+            <label for="exampleInputEmail1" class="form-label" id="puntoUno">1. Escriba la contraseña</label>
             <input type="text" class="form-control" id="algo" aria-describedby="emailHelp">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <p style="font-weight: 500;">Pregunta 2 </p>
+    <form id="pregunta2">
+        <div class="mb-3">
+        <label id="punto2" class="form-label">Array números</label>
+        <input id=dosecito type="string" class="form-control">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
     <!-- *//Pregunta 3 -->
     <form id="pregunta3">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" id="punto3">Separe su texto</label>
+            <label for="exampleInputEmail1" class="form-label" id="punto3">3. Separe su texto</label>
             <input type="text" class="form-control" id="cadenita" aria-describedby="emailHelp">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    <!-- pregunta 5 -->
-    <form id="pregunta5">
+
+    <p style="font-weight: 500;">Pregunta 4 </p>
+    <form id="pregunta4">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" id="punto5">¿Número Primo?</label>
-            <input type="number" class="form-control" id="cinquito" aria-describedby="emailHelp">
-        </div>
+        <label id="punto4" class="form-label">Cadena de texto</label>
+        <input id="cuatrico" type="string" class="form-control">
         <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </form>
 
+    <!-- pregunta 5 -->
+    <p style="font-weight: 500;">Pregunta 5 </p>
+    <form id="pregunta5">
+        <div class="mb-3">
+        <label class="form-label" id="punto5">Número</labelfor=>
+        <input id="cinquito" type="number" class="form-control">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+</form>
+
+
+    <p style="font-weight: 500;">Pregunta 6 </p>
+    <form id="pregunta6">
+        <div class="mb-3">
+        <label class="form-label" id="punto6">Número</label>
+        <input id="six" type="number" class="form-control">
+        <button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+    </form>
     <!-- pregunta 7 -->
     <form id="pregunta7">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" id="punto7">Largo de las palabras</label>
+            <label for="exampleInputEmail1" class="form-label" id="punto7">7. Largo de las palabras</label>
             <input type="text" class="form-control" id="el7" aria-describedby="emailHelp">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+
+    <p style="font-weight: 500;">Pregunta 8 </p>
+    <form id="pregunta8">
+        <div class="mb-3">
+        <label class="form-label" id="punto8">Cadena de texto</label>
+        <input id="eight" type="string" class="form-control">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
     <!-- pregunta 9 -->
     <form id="pregunta9">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" id="punto9">¿Son Anagramas?</label>
+            <label for="exampleInputEmail1" class="form-label" id="punto9">9. ¿Son Anagramas?</label>
             <input type="text" class="form-control" id="el9" aria-describedby="emailHelp">
             <input type="text" class="form-control" id="el92" aria-describedby="emailHelp">
         </div>
@@ -57,7 +96,7 @@
     <!-- pregunta 10 -->
     <form id="pregunta10">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label" id="punto10">¿Número Primo?</label>
+            <label for="exampleInputEmail1" class="form-label" id="punto10">10. Este no sirve</label>
             <input type="number" class="form-control" id="el10" aria-describedby="emailHelp">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -167,7 +206,7 @@ let punto7 = document.querySelector("#pregunta7")
 
          // Punto 9
          let punto9 = document.querySelector("#pregunta9")
-        punto10.addEventListener("submit", (gatico) => {
+        punto9.addEventListener("submit", (gatico) => {
             gatico.preventDefault()
             let input1 = gatico.target.el9.value
             let input2 = gatico.target.el92.value
