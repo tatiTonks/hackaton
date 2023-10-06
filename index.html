@@ -136,17 +136,22 @@ let punto7 = document.querySelector("#pregunta7")
         punto7.addEventListener("submit", (data) => {
             data.preventDefault()
             let arbol = data.target.el7.value
-            let len =[]
 
             separar2 = arbol.split(' ')
-            console.log(separar2)
 
-            for (let i = 0; i < separar2.length; i++){
-        len.push(separar2[i])}
-    
-    return len
-          
-            console.log(len)
+            function palabraLarga(str){
+
+            const mapearElArray = str.map(item => item.length)
+            const PalabraMasLarga = Math.max(...mapearElArray);
+
+  const result = separar2.find(item => item.length === PalabraMasLarga);
+  return result;
+        }
+        palabraLarga(separar2)
+
+        Swal.fire(
+                `${palabraLarga(separar2)}`,
+            )
 
         })
 
