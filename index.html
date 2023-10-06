@@ -44,6 +44,16 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+    <!-- pregunta 9 -->
+    <form id="pregunta9">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label" id="punto9">¿Son Anagramas?</label>
+            <input type="text" class="form-control" id="el9" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="el92" aria-describedby="emailHelp">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
     <!-- pregunta 10 -->
     <form id="pregunta10">
         <div class="mb-3">
@@ -155,6 +165,37 @@ let punto7 = document.querySelector("#pregunta7")
 
         })
 
+         // Punto 9
+         let punto9 = document.querySelector("#pregunta9")
+        punto10.addEventListener("submit", (gatico) => {
+            gatico.preventDefault()
+            let input1 = gatico.target.el9.value
+            let input2 = gatico.target.el92.value
+
+            function anagramajeje(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false
+  }
+  str1 = str1.replace(/\s/g, '').toLowerCase()
+  str2 = str2.replace(/\s/g, '').toLowerCase()
+  let counter = {}
+  for (let letters of str1) {
+    counter[letters] = counter[letters] ? counter[letters] + 1 : 1
+  }
+  for (let items of str2) {
+    if (!counter[items]) {
+      return false
+    }
+    counter[items] -= 1
+  }
+  return true
+}
+const checkAnagram = anagramajeje(input1, input2)
+Swal.fire(
+                `${anagramajeje(input1, input2)}`,
+            )
+
+        })
         // Punto 10
         let punto10 = document.querySelector("#pregunta10")
         punto10.addEventListener("submit", (die) => {
